@@ -1,5 +1,6 @@
 export const location = {
     //Alagoas
+    alagoas : 'Alagoas',
     penedo : 'Penedo',
     riolargo : 'Rio Largo',
     arapiraca : 'Arapiraca',
@@ -7,15 +8,18 @@ export const location = {
     flexeiras : 'Flexeiras',
 
     //Pará
+   para: 'Pará',
    castanhal : 'Castanhal',
    santaIzabel : 'Santa Izabel do Pará',
    acara : 'Acará',
    rendencao : 'Redenção',
-   soure : 'Soure'
+   soure : 'Soure',
+
 }
 
 export const coord = {
       //Alagoas
+    longAlagoas: " 36.7820", latAlagoas: " 9.5708",
     longPenedo: "-36.5861", latPenedo: " -10.2906",
     longRioLargo: "-35.7639", latRioLargo: " -9.6783",
     longArapiraca: "-36.6616", latArapiraca: " -9.7502",
@@ -23,10 +27,13 @@ export const coord = {
     longFlexeiras: "-35.4550", lalFlexeiras: " -9.1632",
 
     //Pará
+    longPara: "55.4250", latPara: "5.8632",
     longCastanhal: "-47.9335", latCastanhal: " -1.2960",
     longSantaIzabel: "-48.2724", latSantaIzabel: "-1.4123",
     longAcara: "-47.8454", latAcara: " -1.6122",
     longRendencao: "-49.4643", latRendencao: "  -8.1857",
     longSoure: "-48.4740", latSoure: " -0.7780",
+
+    
 
 }

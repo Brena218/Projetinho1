@@ -9,46 +9,58 @@ import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer.js';
 import { fromLonLat } from 'ol/proj';
 import {location, coord} from './marcadores/marc.js'
 
+
+const localAl = new Feature({
+  geometry: new Point(fromLonLat([36.7820, 9.5708])),
+  name: `${location.alagoas} <p> Longitude: ${coord.longAlagoas} <br> Latitude: ${coord.latAlagoas}`,
+});
+const localPa = new Feature({
+  geometry: new Point(fromLonLat([55.4250, 5.8632])),
+  name: `${location.para} <p> Longitude: ${coord.longPara} <br> Latitude: ${coord.latPara}`,
+});
+
+
+
 const local = new Feature({
   geometry: new Point(fromLonLat([-36.5861, -10.2906])),
-  name: `${location.penedo}  <p> ${coord.longPenedo}`,
+  name: `${location.penedo} <p> Longitude: ${coord.longPenedo} <br> Latitude: ${coord.latPenedo}`,
 });
 const local2 = new Feature({
   geometry: new Point(fromLonLat([-35.7639, -9.6783])),
-  name: `${location.riolargo}  <p> ${coord.longriolargo}`,
+  name: `${location.riolargo}  <p> Longitude: ${coord.longRioLargo} <br> Latitude: ${coord.latRioLargo}`,
 });
 const local3 = new Feature({
   geometry: new Point(fromLonLat([-36.6616, -9.7502])),
-  name: `${location.arapiraca}  <p> ${coord.arapiraca}`,
+  name: `${location.arapiraca} <p> Longitude: ${coord.longArapiraca} <br> Latitude: ${coord.latArapiraca}`,
 });
 const local4 = new Feature({
   geometry: new Point(fromLonLat([-35.5492, -9.5417])),
-  name: `${location.saoMiguel}  <p> ${coord.longsaoMiguel}`,
+  name: `${location.saoMiguel}  <p> Longitude: ${coord.longBarraDeSaoMiguel} <br> Latitude: ${coord.latBarraDeSaoMiguel}`,
 });
 const local5 = new Feature({
   geometry: new Point(fromLonLat([-35.4550, -9.1632])),
-  name: `${location.flexeiras}  <p> ${coord.longflexeiras}`,
+  name: `${location.flexeiras} <p> Longitude: ${coord.longFlexeiras} <br> Latitude: ${coord.lalFlexeiras}`,
 });
 
 const local6 = new Feature({
   geometry: new Point(fromLonLat([-47.9335, -1.2960])),
-  name: `${location.castanhal}  <p> ${coord.longcastanhal}`,
+  name: `${location.castanhal}   <p> Longitude: ${coord.longCastanhal} <br> Latitude: ${coord.latCastanhal}`,
 });
 const local7 = new Feature({
   geometry: new Point(fromLonLat([-48.2724, -1.4123])),
-  name: `${location.santaIzabel }  <p> ${coord.longsantaIzabel }`,
+  name: `${location.santaIzabel }   <p> Longitude: ${coord.longSantaIzabel} <br> Latitude: ${coord.latSantaIzabel}`,
 });
 const local8 = new Feature({
   geometry: new Point(fromLonLat([-47.8454, -1.6122])),
-  name: `${location.acara}  <p> ${coord.acara}`,
+  name: `${location.acara}  <p> Longitude: ${coord.longAcara} <br> Latitude: ${coord.latAcara}`,
 });
 const local9 = new Feature({
   geometry: new Point(fromLonLat([-49.4643, -8.1857])),
-  name: `${location.rendencao}  <p> ${coord.rendencao}`,
+  name: `${location.rendencao}  <p> Longitude: ${coord.longRendencao}  <br> Latitude: ${coord.latRendencao} `,
 });
 const local10 = new Feature({
   geometry: new Point(fromLonLat([-48.4740, -0.7780])),
-  name: `${location.soure}  <p> ${coord.longsoure}`,
+  name: `${location.soure}  <p> Longitude: ${coord.longSoure}  <br> Latitude: ${coord.latSoure}`,
 });
 
 const iconStyle = new Style({
@@ -60,12 +72,14 @@ const iconStyle = new Style({
   }),
 });
 
+localAl.setStyle(iconStyle);
 local.setStyle(iconStyle);
 local2.setStyle(iconStyle);
 local3.setStyle(iconStyle);
 local4.setStyle(iconStyle);
 local5.setStyle(iconStyle);
 
+localPa.setStyle(iconStyle);
 local6.setStyle(iconStyle);
 local7.setStyle(iconStyle);
 local8.setStyle(iconStyle);
@@ -74,7 +88,7 @@ local10.setStyle(iconStyle);
 
 
 const vectorSource = new VectorSource({
-  features: [local,local2],
+  features: [local,local2,local3,local4,local5,local6,local7,local8,local9,local10],
 });
 
 const vectorLayer = new VectorLayer({
@@ -91,8 +105,8 @@ const map = new Map({
   layers: [rasterLayer, vectorLayer],
   target: document.getElementById('map'),
   view: new View({
-    center: fromLonLat([-40,-30]),
-    zoom: 3.4 ,
+    center: fromLonLat([-50,-30]),
+    zoom: 4 ,
   }),
 });
 
