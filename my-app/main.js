@@ -7,7 +7,7 @@ import {Icon, Style} from 'ol/style.js';
 import {OGCMapTile, OSM, Vector as VectorSource} from 'ol/source.js';
 import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer.js';
 import { fromLonLat } from 'ol/proj';
-import {location, coord} from './marcadores/marc.js'
+import {location, coord, state, link, population} from './marcadores/marc.js';
 
 
 const localAl = new Feature({
@@ -23,44 +23,105 @@ const localPa = new Feature({
 
 const local = new Feature({
   geometry: new Point(fromLonLat([-36.5861, -10.2906])),
-  name: `${location.penedo} <p> Longitude: ${coord.longPenedo} <br> Latitude: ${coord.latPenedo}`,
+  name: `
+  <h3>${location.penedo}</h3>
+  <p> Longitude: ${coord.longPenedo} 
+  <p> Latitude: ${coord.latPenedo}
+  <p> Estado: ${state.alagoas}
+  <p> <a href= ${link.penedo}> Prefeitura Local </a>
+  <p> População: ${population.penedo} `
 });
 const local2 = new Feature({
   geometry: new Point(fromLonLat([-35.7639, -9.6783])),
-  name: `${location.riolargo}  <p> Longitude: ${coord.longRioLargo} <br> Latitude: ${coord.latRioLargo}`,
+  name: `
+  <h3>${location.riolargo}</h3>
+  <p> Longitude: ${coord.longRioLargo} 
+  <p> Latitude: ${coord.latRioLargo}
+  <p> Estado: ${state.alagoas}
+  <p> <a href= ${link.rioLargo}> Prefeitura Local </a>
+  <p> População: ${population.rioLargo}`
 });
 const local3 = new Feature({
   geometry: new Point(fromLonLat([-36.6616, -9.7502])),
-  name: `${location.arapiraca} <p> Longitude: ${coord.longArapiraca} <br> Latitude: ${coord.latArapiraca}`,
+  name: `
+  <h3>${location.arapiraca}</h3>
+  <p> Longitude: ${coord.longArapiraca} 
+  <p> Latitude: ${coord.latArapiraca}
+   <p> Estado: ${state.alagoas}
+  <p> <a href= ${link.arapiraca}> Prefeitura Local </a>
+  <p> População: ${population.arapiraca}`
 });
 const local4 = new Feature({
   geometry: new Point(fromLonLat([-35.5492, -9.5417])),
-  name: `${location.saoMiguel}  <p> Longitude: ${coord.longBarraDeSaoMiguel} <br> Latitude: ${coord.latBarraDeSaoMiguel}`,
+  name: `
+  <h3>${location.saoMiguel}</h3>
+  <p> Longitude: ${coord.longBarraDeSaoMiguel} 
+  <p> Latitude: ${coord.latBarraDeSaoMiguel}
+  <p> Estado: ${state.alagoas}
+  <p> <a href= ${link.saoMiguel}> Prefeitura Local </a>
+  <p> População: ${population.saoMiguel}`
 });
 const local5 = new Feature({
   geometry: new Point(fromLonLat([-35.4550, -9.1632])),
-  name: `${location.flexeiras} <p> Longitude: ${coord.longFlexeiras} <br> Latitude: ${coord.lalFlexeiras}`,
+  name: `
+  <h3>${location.flexeiras}</h3>
+  <p> Longitude: ${coord.longFlexeiras} 
+  <p> Latitude: ${coord.lalFlexeiras}
+  <p> Estado: ${state.alagoas}
+  <p> <a href= ${link.flexeiras}> Prefeitura Local </a>
+  <p> População: ${population.flexeiras} `
 });
 
 const local6 = new Feature({
   geometry: new Point(fromLonLat([-47.9335, -1.2960])),
-  name: `${location.castanhal}   <p> Longitude: ${coord.longCastanhal} <br> Latitude: ${coord.latCastanhal}`,
+  name: `
+  <h3>${location.castanhal}</h3>
+  <p> Longitude: ${coord.longCastanhal}
+  <p> Latitude: ${coord.latCastanhal}
+  <p> Estado: ${state.para}
+  <p> <a href= ${link.castanhal}> Prefeitura Local </a>
+  <p> População: ${population.castanhal}`
 });
 const local7 = new Feature({
   geometry: new Point(fromLonLat([-48.2724, -1.4123])),
-  name: `${location.santaIzabel }   <p> Longitude: ${coord.longSantaIzabel} <br> Latitude: ${coord.latSantaIzabel}`,
+  name: `
+  <h3>${location.santaIzabel }</h3>
+  <p> Longitude: ${coord.longSantaIzabel}
+  <p> Latitude: ${coord.latSantaIzabel}
+  <p> Estado: ${state.para}
+  <p> <a href= ${link.santaIzabel}> Prefeitura Local </a>
+  <p> População: ${population.santaIzabel}`
 });
 const local8 = new Feature({
   geometry: new Point(fromLonLat([-47.8454, -1.6122])),
-  name: `${location.acara}  <p> Longitude: ${coord.longAcara} <br> Latitude: ${coord.latAcara}`,
+  name: `
+  <h3>${location.acara}</h3>  
+  <p> Longitude: ${coord.longAcara} 
+  <p> Latitude: ${coord.latAcara}
+  <p> Estado: ${state.para}
+  <p> <a href= ${link.acara}> Prefeitura Local </a>
+  <p> População: ${population.acara}`
 });
 const local9 = new Feature({
   geometry: new Point(fromLonLat([-49.4643, -8.1857])),
-  name: `${location.rendencao}  <p> Longitude: ${coord.longRendencao}  <br> Latitude: ${coord.latRendencao} `,
+  name: `
+  <h3>${location.rendencao}</h3>  
+  <p> Longitude: ${coord.longRendencao}  
+  <p> Latitude: ${coord.latRendencao} 
+  <p> Estado: ${state.para}
+  <p> <a href= ${link.rendencao}> Prefeitura Local </a>
+  <p> População: ${population.rendencao}`
 });
 const local10 = new Feature({
   geometry: new Point(fromLonLat([-48.4740, -0.7780])),
-  name: `${location.soure}  <p> Longitude: ${coord.longSoure}  <br> Latitude: ${coord.latSoure}`,
+  name: `
+  <h3>${location.soure}</h3>  
+  <p> Longitude: ${coord.longSoure}  
+  <p> Latitude: ${coord.latSoure}
+  <p> Estado: ${state.para}
+  <p> <a href= ${link.soure}> Prefeitura Local </a>
+  <p> População: ${population.soure}`
+
 });
 
 const iconStyle = new Style({
@@ -126,7 +187,7 @@ function disposePopover() {
     popover = undefined;
   }
 }
-// display popup on click
+// exibir popup ao clicar
 map.on('click', function (evt) {
   const feature = map.forEachFeatureAtPixel(evt.pixel, function (feature) {
     return feature;
@@ -144,11 +205,11 @@ map.on('click', function (evt) {
   popover.show();
 });
 
-// change mouse cursor when over marker
+// Alterar o cursor do mouse quando estiver sobre o marcador
 map.on('pointermove', function (e) {
   const pixel = map.getEventPixel(e.originalEvent);
   const hit = map.hasFeatureAtPixel(pixel);
   map.getTarget().style.cursor = hit ? 'pointer' : '';
 });
-// Close the popup when the map is moved
+// Feche o popup quando o mapa for movido
 map.on('movestart', disposePopover);
