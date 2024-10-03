@@ -1,6 +1,5 @@
 export const location = {
   //Alagoas
-  alagoas : 'Alagoas',
   penedo : 'Penedo',
   riolargo : 'Rio Largo',
   arapiraca : 'Arapiraca',
@@ -8,30 +7,27 @@ export const location = {
   flexeiras : 'Flexeiras',
 
   //Pará
- para: 'Pará',
  castanhal : 'Castanhal',
  santaIzabel : 'Santa Izabel do Pará',
- acara : 'Acará',
- rendencao : 'Redenção',
+ belem : 'Belém',
+ redencao : 'Redenção',
  soure : 'Soure',
 
 }
 
 export const coord = {
     //Alagoas
-  longAlagoas: " 36.7820", latAlagoas: " 9.5708",
-  longPenedo: "-36.5861", latPenedo: " -10.2906",
-  longRioLargo: "-35.7639", latRioLargo: " -9.6783",
+  longPenedo: "-36.5784", latPenedo: " -10.2965",
+  longRioLargo: "-35.7372", latRioLargo: " -9.6744",
   longArapiraca: "-36.6616", latArapiraca: " -9.7502",
   longBarraDeSaoMiguel: " -35.5492", latBarraDeSaoMiguel: " -9.5417",
   longFlexeiras: "-35.4550", lalFlexeiras: " -9.1632",
 
   //Pará
-  longPara: "55.4250", latPara: "5.8632",
   longCastanhal: "-47.9335", latCastanhal: " -1.2960",
   longSantaIzabel: "-48.2724", latSantaIzabel: "-1.4123",
-  longAcara: "-47.8454", latAcara: " -1.6122",
-  longRendencao: "-49.4643", latRendencao: "  -8.1857",
+  longBelem: "-48.4902", latBelem: "-1.4558", 
+  longRedencao: "-49.4643", latRedencao: "  -8.1857",
   longSoure: "-48.4740", latSoure: " -0.7780",
 
 }
@@ -43,17 +39,17 @@ para: "Pará"
 
 // link para a prefeitura de cada cidade
 export const link = {
-penedo: "https://penedo.al.gov.br/" ,
-rioLargo: "https://site.riolargo.al.gov.br/",
-arapiraca: "https://web.arapiraca.al.gov.br/",
-saoMiguel: "https://barradesaomiguel.al.gov.br/",
-flexeiras: "https://transparenciaflexeiras.al.gov.br/",
+penedo:"https://penedo.al.gov.br/" ,
+rioLargo:"https://site.riolargo.al.gov.br/",
+arapiraca:"https://web.arapiraca.al.gov.br/",
+saoMiguel:"https://barradesaomiguel.al.gov.br/",
+flexeiras:"https://transparenciaflexeiras.al.gov.br/",
 
-castanhal: "https://www2.castanhal.pa.gov.br/",
-santaIzabel: "https://santaizabel.pa.gov.br/",
-acara: "https://acara.pa.gov.br/",
-redencao: "https://redencao.pa.gov.br/",
-soure: "https://soure.pa.gov.br/"
+castanhal:"https://www2.castanhal.pa.gov.br/",
+santaIzabel:"https://santaizabel.pa.gov.br/",
+belem:"https://prefeitura.belem.pa.gov.br/",
+redencao:"https://redencao.pa.gov.br/",
+soure:"https://soure.pa.gov.br/"
 }
 
 export const population = {
@@ -65,7 +61,7 @@ flexeiras: "População Residente : 9.618",
 
 castanhal: "População Residente : 192.256",
 santaIzabel: "População Residente : 203.080.756",
-acara: "População Residente : 59.023",
+belem: "População Residente : 1.303.403",
 redencao: "População Residente : 85.597",
 soure: "População Residente : 24.204"
 }
