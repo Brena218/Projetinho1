@@ -200,36 +200,51 @@ const popup = new Overlay({
 });
 map.addOverlay(popup); // Adicionando o popup ao mapa
 
-let popover;
+let popover; // Variável para armazenar a instância do popover
+
+// Função para dispensar (fechar) o popover
 function disposePopover() {
+  // Verifica se o popover existe
   if (popover) {
-    popover.dispose();
-    popover = undefined;
+    popover.dispose(); // Fecha o popover
+    popover = undefined; // Limpa a variável para liberar a memória
   }
 }
-// display popup on click
+
+// Exibir o popup ao clicar no mapa
 map.on('click', function (evt) {
+  // Verifica se há uma feature no pixel onde foi feito o clique
   const feature = map.forEachFeatureAtPixel(evt.pixel, function (feature) {
-    return feature;
+    return feature; // Retorna a feature encontrada
   });
-  disposePopover();
+
+  disposePopover(); // Fecha qualquer popover existente
+
+  // Se não houver feature, sai da função
   if (!feature) {
     return;
   }
+
+  // Define a posição do popup para as coordenadas do clique
   popup.setPosition(evt.coordinate);
+
+  // Cria uma nova instância do popover do Bootstrap
   popover = new bootstrap.Popover(element, {
-    placement: 'top',
-    html: true,
-    content: feature.get('name'),
+    placement: 'top', // Define a posição do popover
+    html: true, // Permite que o conteúdo do popover seja HTML
+    content: feature.get('name'), // Define o conteúdo do popover com o nome da feature
   });
-  popover.show();
+
+  popover.show(); // Exibe o popover
 });
 
-// change mouse cursor when over marker
+// Mudar o cursor do mouse quando estiver sobre um marcador
 map.on('pointermove', function (e) {
-  const pixel = map.getEventPixel(e.originalEvent);
-  const hit = map.hasFeatureAtPixel(pixel);
+  const pixel = map.getEventPixel(e.originalEvent); // Obtém o pixel do evento
+  const hit = map.hasFeatureAtPixel(pixel); // Verifica se há uma feature nesse pixel
+  // Altera o cursor para 'pointer' se houver uma feature, caso contrário, limpa
   map.getTarget().style.cursor = hit ? 'pointer' : '';
 });
-// Close the popup when the map is moved
-map.on('movestart', disposePopover);
+
+// Fecha o popup quando o mapa é movido
+map.on('movestart', disposePopover); // Chama a função para dispensar o popover ao iniciar o movimento do mapa
