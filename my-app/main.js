@@ -21,7 +21,7 @@ const localPa = new Feature({
 
 
 
-const local = new Feature({
+const local16 = new Feature({
   geometry: new Point(fromLonLat([-36.5861, -10.2906])),
   name: `
   <h3>${location.penedo}</h3>
@@ -31,7 +31,7 @@ const local = new Feature({
   <p> <a href= ${link.penedo}> Prefeitura Local </a>
   <p> População: ${population.penedo} `
 });
-const local2 = new Feature({
+const local17 = new Feature({
   geometry: new Point(fromLonLat([-35.7639, -9.6783])),
   name: `
   <h3>${location.riolargo}</h3>
@@ -41,7 +41,7 @@ const local2 = new Feature({
   <p> <a href= ${link.rioLargo}> Prefeitura Local </a>
   <p> População: ${population.rioLargo}`
 });
-const local3 = new Feature({
+const local18 = new Feature({
   geometry: new Point(fromLonLat([-36.6616, -9.7502])),
   name: `
   <h3>${location.arapiraca}</h3>
@@ -51,7 +51,7 @@ const local3 = new Feature({
   <p> <a href= ${link.arapiraca}> Prefeitura Local </a>
   <p> População: ${population.arapiraca}`
 });
-const local4 = new Feature({
+const local19 = new Feature({
   geometry: new Point(fromLonLat([-35.5492, -9.5417])),
   name: `
   <h3>${location.saoMiguel}</h3>
@@ -61,7 +61,7 @@ const local4 = new Feature({
   <p> <a href= ${link.saoMiguel}> Prefeitura Local </a>
   <p> População: ${population.saoMiguel}`
 });
-const local5 = new Feature({
+const local20 = new Feature({
   geometry: new Point(fromLonLat([-35.4550, -9.1632])),
   name: `
   <h3>${location.flexeiras}</h3>
@@ -72,7 +72,7 @@ const local5 = new Feature({
   <p> População: ${population.flexeiras} `
 });
 
-const local6 = new Feature({
+const local21 = new Feature({
   geometry: new Point(fromLonLat([-47.9335, -1.2960])),
   name: `
   <h3>${location.castanhal}</h3>
@@ -82,7 +82,7 @@ const local6 = new Feature({
   <p> <a href= ${link.castanhal}> Prefeitura Local </a>
   <p> População: ${population.castanhal}`
 });
-const local7 = new Feature({
+const local22 = new Feature({
   geometry: new Point(fromLonLat([-48.2724, -1.4123])),
   name: `
   <h3>${location.santaIzabel }</h3>
@@ -92,7 +92,7 @@ const local7 = new Feature({
   <p> <a href= ${link.santaIzabel}> Prefeitura Local </a>
   <p> População: ${population.santaIzabel}`
 });
-const local8 = new Feature({
+const local23 = new Feature({
   geometry: new Point(fromLonLat([-47.8454, -1.6122])),
   name: `
   <h3>${location.acara}</h3>  
@@ -102,7 +102,7 @@ const local8 = new Feature({
   <p> <a href= ${link.acara}> Prefeitura Local </a>
   <p> População: ${population.acara}`
 });
-const local9 = new Feature({
+const local24 = new Feature({
   geometry: new Point(fromLonLat([-49.4643, -8.1857])),
   name: `
   <h3>${location.rendencao}</h3>  
@@ -112,7 +112,7 @@ const local9 = new Feature({
   <p> <a href= ${link.rendencao}> Prefeitura Local </a>
   <p> População: ${population.rendencao}`
 });
-const local10 = new Feature({
+const local25 = new Feature({
   geometry: new Point(fromLonLat([-48.4740, -0.7780])),
   name: `
   <h3>${location.soure}</h3>  
@@ -134,22 +134,22 @@ const iconStyle = new Style({
 });
 
 localAl.setStyle(iconStyle);
-local.setStyle(iconStyle);
-local2.setStyle(iconStyle);
-local3.setStyle(iconStyle);
-local4.setStyle(iconStyle);
-local5.setStyle(iconStyle);
+local16.setStyle(iconStyle);
+local17.setStyle(iconStyle);
+local18.setStyle(iconStyle);
+local19.setStyle(iconStyle);
+local20.setStyle(iconStyle);
 
 localPa.setStyle(iconStyle);
-local6.setStyle(iconStyle);
-local7.setStyle(iconStyle);
-local8.setStyle(iconStyle);
-local9.setStyle(iconStyle);
-local10.setStyle(iconStyle);
+local21.setStyle(iconStyle);
+local22.setStyle(iconStyle);
+local23.setStyle(iconStyle);
+local24.setStyle(iconStyle);
+local25.setStyle(iconStyle);
 
 
 const vectorSource = new VectorSource({
-  features: [local,local2,local3,local4,local5,local6,local7,local8,local9,local10],
+  features: [localAl,local16,local17,local18,local19,local20,localPa,local21,local22,local23,local24,local25],
 });
 
 const vectorLayer = new VectorLayer({
