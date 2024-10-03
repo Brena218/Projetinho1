@@ -1,20 +1,20 @@
 // Importando as classes necessárias da biblioteca OpenLayers
-import Feature from 'ol/Feature.js';
-import Map from 'ol/Map.js';
-import Overlay from 'ol/Overlay.js';
-import Point from 'ol/geom/Point.js';
-import View from 'ol/View.js';
-import { Icon, Style } from 'ol/style.js';
-import { OGCMapTile, OSM, Vector as VectorSource } from 'ol/source.js';
-import { Tile as TileLayer, Vector as VectorLayer } from 'ol/layer.js';
-import { fromLonLat } from 'ol/proj';
-import { location, coord, state, link, population } from './marcadores/marc.js';
+import Feature from "ol/Feature.js";
+import Map from "ol/Map.js";
+import Overlay from "ol/Overlay.js";
+import Point from "ol/geom/Point.js";
+import View from "ol/View.js";
+import { Icon, Style } from "ol/style.js";
+import { OGCMapTile, OSM, Vector as VectorSource } from "ol/source.js";
+import { Tile as TileLayer, Vector as VectorLayer } from "ol/layer.js";
+import { fromLonLat } from "ol/proj";
+import { location, coord, state, link, population } from "./marcadores/marc.js";
 
 // Criando marcadores
 
 // Locais de Alagoas
 const local16 = new Feature({
-  geometry: new Point(fromLonLat([-36.5861, -10.2906])), 
+  geometry: new Point(fromLonLat([-36.5861, -10.2906])),
   name: `
   <img src=foto/penedo.jpeg width ="220">
   <h3>${location.penedo}</h3>
@@ -22,9 +22,8 @@ const local16 = new Feature({
   <p> Latitude: ${coord.latPenedo}
   <p> Estado: ${state.alagoas}
   <p> <a href=${link.penedo}> Prefeitura Local </a> 
-  <p> ${population.penedo} `
+  <p> ${population.penedo} `,
 });
-
 
 const local17 = new Feature({
   geometry: new Point(fromLonLat([-35.7639, -9.6783])),
@@ -35,12 +34,11 @@ const local17 = new Feature({
   <p> Latitude: ${coord.latRioLargo}
   <p> Estado: ${state.alagoas}
   <p> <a href=${link.rioLargo}> Prefeitura Local </a>
-  <p> ${population.rioLargo}`
+  <p> ${population.rioLargo}`,
 });
 
-
 const local18 = new Feature({
-  geometry: new Point(fromLonLat([-36.6616, -9.7502])), 
+  geometry: new Point(fromLonLat([-36.6616, -9.7502])),
   name: `
   <img src=foto/arapiraca.png width ="220">
   <h3>${location.arapiraca}</h3>
@@ -48,11 +46,11 @@ const local18 = new Feature({
   <p> Latitude: ${coord.latArapiraca}
    <p> Estado: ${state.alagoas}
   <p> <a href=${link.arapiraca}> Prefeitura Local </a>
-  <p> ${population.arapiraca}`
+  <p> ${population.arapiraca}`,
 });
 
 const local19 = new Feature({
-  geometry: new Point(fromLonLat([ -35.7450,-9.6659])), 
+  geometry: new Point(fromLonLat([-35.745, -9.6659])),
   name: `
   <img src=foto/maceio.png width ="220">
   <h3>${location.maceio}</h3>
@@ -60,11 +58,11 @@ const local19 = new Feature({
   <p> Latitude: ${coord.latMaceio}
   <p> Estado: ${state.alagoas}
   <p> <a href= ${link.maceio}> Prefeitura Local </a>
-  <p> ${population.maceio}`
+  <p> ${population.maceio}`,
 });
 
 const local20 = new Feature({
-  geometry: new Point(fromLonLat([-35.4550, -9.1632])), 
+  geometry: new Point(fromLonLat([-35.455, -9.1632])),
   name: `
   <img src=foto/flexeiras.png width ="220">
   <h3>${location.flexeiras}</h3>
@@ -72,12 +70,12 @@ const local20 = new Feature({
   <p> Latitude: ${coord.lalFlexeiras}
   <p> Estado: ${state.alagoas}
   <p> <a href= ${link.flexeiras}> Prefeitura Local </a>
-  <p> ${population.flexeiras} `
+  <p> ${population.flexeiras} `,
 });
 
 // Locais do Pará
 const local21 = new Feature({
-  geometry: new Point(fromLonLat([-47.9335, -1.2960])), 
+  geometry: new Point(fromLonLat([-47.9335, -1.296])),
   name: `
   <img src=foto/castanhal.jpeg width ="220">
   <h3>${location.castanhal}</h3>
@@ -85,12 +83,11 @@ const local21 = new Feature({
   <p> Latitude: ${coord.latCastanhal}
   <p> Estado: ${state.para}
   <p> <a href= ${link.castanhal}> Prefeitura Local </a>
-  <p> ${population.castanhal}`
+  <p> ${population.castanhal}`,
 });
 
-
 const local22 = new Feature({
-  geometry: new Point(fromLonLat([-48.2724, -1.4123])), 
+  geometry: new Point(fromLonLat([-48.2724, -1.4123])),
   name: `
   <img src=foto/santaizabel.jpeg width ="220">
   <h3>${location.santaIzabel}</h3>
@@ -98,11 +95,11 @@ const local22 = new Feature({
   <p> Latitude: ${coord.latSantaIzabel}
   <p> Estado: ${state.para}
   <p> <a href= ${link.santaIzabel}> Prefeitura Local </a>
-  <p> ${population.santaIzabel}`
+  <p> ${population.santaIzabel}`,
 });
 
 const local23 = new Feature({
-  geometry: new Point(fromLonLat([-48.4902,-1.4558])), 
+  geometry: new Point(fromLonLat([-48.4902, -1.4558])),
   name: `
   <img src=foto/belem.png width ="220">
   <h3>${location.belem}</h3>  
@@ -110,11 +107,11 @@ const local23 = new Feature({
   <p> Latitude: ${coord.latBelem}
   <p> Estado: ${state.para}
   <p> <a href= ${link.belem}> Prefeitura Local </a>
-  <p> ${population.belem}`
+  <p> ${population.belem}`,
 });
 
 const local24 = new Feature({
-  geometry: new Point(fromLonLat([-49.4643, -8.1857])), 
+  geometry: new Point(fromLonLat([-49.4643, -8.1857])),
   name: `
   <img src=foto/redencao.jpeg width ="220">
   <h3>${location.redencao}</h3>  
@@ -122,11 +119,11 @@ const local24 = new Feature({
   <p> Latitude: ${coord.latRedencao} 
   <p> Estado: ${state.para}
   <p> <a href="${link.redencao}"> Prefeitura Local </a>
-  <p> ${population.redencao}`
+  <p> ${population.redencao}`,
 });
 
 const local25 = new Feature({
-  geometry: new Point(fromLonLat([-48.4740, -0.7780])), 
+  geometry: new Point(fromLonLat([-48.474, -0.778])),
   name: `
   <img src=foto/soure.jpg width ="220">
   <h3>${location.soure}</h3>  
@@ -134,16 +131,16 @@ const local25 = new Feature({
   <p> Latitude: ${coord.latSoure}
   <p> Estado: ${state.para}
   <p> <a href= ${link.soure}> Prefeitura Local </a>
-  <p> ${population.soure}`
+  <p> ${population.soure}`,
 });
 
 // Estilo do ícone que será utilizado nos marcadores
 const iconStyle = new Style({
   image: new Icon({
     anchor: [0.5, 1], // Posição do âncora do ícone
-    anchorXUnits: 'fraction',
-    anchorYUnits: 'pixels',
-    src: 'foto/icon.png', // Caminho para a imagem do ícone
+    anchorXUnits: "fraction",
+    anchorYUnits: "pixels",
+    src: "foto/icon.png", // Caminho para a imagem do ícone
   }),
 });
 
@@ -162,7 +159,18 @@ local25.setStyle(iconStyle);
 
 // Criando a fonte de dados para os marcadores
 const vectorSource = new VectorSource({
-  features: [ local16, local17, local18, local19, local20, local21, local22, local23, local24, local25],
+  features: [
+    local16,
+    local17,
+    local18,
+    local19,
+    local20,
+    local21,
+    local22,
+    local23,
+    local24,
+    local25,
+  ],
 });
 
 // Criando a camada vetorial para os marcadores
@@ -170,17 +178,17 @@ const vectorLayer = new VectorLayer({
   source: vectorSource,
 });
 
-// Criando a camada raster (mapa base) 
+// Criando a camada raster (mapa base)
 const rasterLayer = new TileLayer({
   source: new OSM({
-    crossOrigin: '',
+    crossOrigin: "",
   }),
 });
 
 // Criando o mapa com as camadas raster e vetorial
 const map = new Map({
   layers: [rasterLayer, vectorLayer],
-  target: document.getElementById('map'), 
+  target: document.getElementById("map"),
   view: new View({
     center: fromLonLat([-50, -30]), // Centro do mapa
     zoom: 4, // Nível de zoom inicial
@@ -188,12 +196,12 @@ const map = new Map({
 });
 
 // Criando um elemento para o popup
-const element = document.getElementById('popup');
+const element = document.getElementById("popup");
 
 // Criando um overlay para o popup
 const popup = new Overlay({
   element: element,
-  positioning: 'bottom-center', // Posição do popup
+  positioning: "bottom-center", // Posição do popup
   stopEvent: false,
 });
 map.addOverlay(popup); // Adicionando o popup ao mapa
@@ -210,10 +218,10 @@ function disposePopover() {
 }
 
 // Exibir o popup ao clicar no mapa
-map.on('click', function (evt) {
-  // Verifica 
+map.on("click", function (evt) {
+  // Verifica
   const feature = map.forEachFeatureAtPixel(evt.pixel, function (feature) {
-    return feature; 
+    return feature;
   });
 
   disposePopover(); // Fecha qualquer popover existente
@@ -228,21 +236,21 @@ map.on('click', function (evt) {
 
   // Cria uma nova instância do popover do Bootstrap
   popover = new bootstrap.Popover(element, {
-    placement: 'top', // Define a posição do popover
-    html: true, 
-    content: feature.get('name'), 
+    placement: "top", // Define a posição do popover
+    html: true,
+    content: feature.get("name"),
   });
 
   popover.show(); // Exibe o popover
 });
 
 // Mudar o cursor do mouse quando estiver sobre um marcador
-map.on('pointermove', function (e) {
-  const pixel = map.getEventPixel(e.originalEvent); 
-  const hit = map.hasFeatureAtPixel(pixel); 
+map.on("pointermove", function (e) {
+  const pixel = map.getEventPixel(e.originalEvent);
+  const hit = map.hasFeatureAtPixel(pixel);
   // Altera o cursor para 'pointer' se houver uma feature, caso contrário, limpa
-  map.getTarget().style.cursor = hit ? 'pointer' : '';
+  map.getTarget().style.cursor = hit ? "pointer" : "";
 });
 
 // Fecha o popup quando o mapa é movido
-map.on('movestart', disposePopover); // Chama a função para dispensar o popover ao iniciar o movimento do mapa
+map.on("movestart", disposePopover); // Chama a função para dispensar o popover ao iniciar o movimento do mapa
