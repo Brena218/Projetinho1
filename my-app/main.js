@@ -21,7 +21,7 @@ const local16 = new Feature({
   <p> Longitude: ${coord.longPenedo} 
   <p> Latitude: ${coord.latPenedo}
   <p> Estado: ${state.alagoas}
-  <p> <a href=${link.penedo}> Prefeitura Local </a>
+  <p> <a href=${link.penedo}> Prefeitura Local </a> 
   <p> ${population.penedo} `
 });
 
@@ -52,15 +52,15 @@ const local18 = new Feature({
 });
 
 const local19 = new Feature({
-  geometry: new Point(fromLonLat([-35.5492, -9.5417])), 
+  geometry: new Point(fromLonLat([ -35.7450,-9.6659])), 
   name: `
-  <img src=foto/barradesaomiguel.png width ="220">
-  <h3>${location.saoMiguel}</h3>
-  <p> Longitude: ${coord.longBarraDeSaoMiguel} 
-  <p> Latitude: ${coord.latBarraDeSaoMiguel}
+  <img src=foto/maceio.png width ="220">
+  <h3>${location.maceio}</h3>
+  <p> Longitude: ${coord.longMaceio} 
+  <p> Latitude: ${coord.latMaceio}
   <p> Estado: ${state.alagoas}
-  <p> <a href= ${link.saoMiguel}> Prefeitura Local </a>
-  <p> ${population.saoMiguel}`
+  <p> <a href= ${link.maceio}> Prefeitura Local </a>
+  <p> ${population.maceio}`
 });
 
 const local20 = new Feature({

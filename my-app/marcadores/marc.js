@@ -3,7 +3,7 @@ export const location = {
   penedo : 'Penedo',
   riolargo : 'Rio Largo',
   arapiraca : 'Arapiraca',
-  saoMiguel : 'Barra de São Miguel',
+  maceio : 'Maceió',
   flexeiras : 'Flexeiras',
 
   //Pará
@@ -20,7 +20,7 @@ export const coord = {
   longPenedo: "-36.5784", latPenedo: " -10.2965",
   longRioLargo: "-35.7372", latRioLargo: " -9.6744",
   longArapiraca: "-36.6616", latArapiraca: " -9.7502",
-  longBarraDeSaoMiguel: " -35.5492", latBarraDeSaoMiguel: " -9.5417",
+  longMaceio: "  -35.7450", latMaceio: " -9.6659",
   longFlexeiras: "-35.4550", lalFlexeiras: " -9.1632",
 
   //Pará
@@ -42,7 +42,7 @@ export const link = {
 penedo:"https://penedo.al.gov.br/" ,
 rioLargo:"https://site.riolargo.al.gov.br/",
 arapiraca:"https://web.arapiraca.al.gov.br/",
-saoMiguel:"https://barradesaomiguel.al.gov.br/",
+maceio:"https://maceio.al.gov.br/",
 flexeiras:"https://transparenciaflexeiras.al.gov.br/",
 
 castanhal:"https://www2.castanhal.pa.gov.br/",
@@ -56,7 +56,7 @@ export const population = {
 penedo: "População Residente: 58.650 " ,
 rioLargo: "População Residente : 93.927",
 arapiraca: "População Residente : 234.696",
-saoMiguel: "População Residente : 7.944",
+maceio: "População Residente : 957.916",
 flexeiras: "População Residente : 9.618",
 
 castanhal: "População Residente : 192.256",
