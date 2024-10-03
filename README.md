@@ -27,7 +27,7 @@ Você precisará:
     * TO
     * MG
     * AP
-* Brena e Victor
+* Brena e Vitor
     * AL
     * PA
     * RN
